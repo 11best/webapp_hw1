@@ -1,18 +1,20 @@
-/* div[class] {
-    border: 1px solid gray;
-}
+/*div[class] {
+    border: 1px solid black;
+}*/
 .cards-component>div:nth-child(odd) {
-    background-color: lightgray;
+    background-color: white;
 }
 .cards-component>div:nth-child(even) {
     background-color: lightgoldenrodyellow;
 }
 .fas {
-    color: red;
-} */
+    color: white;
+    font-size: 140%;
+} 
 
 #main {
     transition: margin-left .5s;
+    font-family: Blogger Sans;
 }
 li{
     list-style: none;
@@ -24,24 +26,42 @@ a{
 /*---------- header ------------*/
 .logo-hamburger{
     text-align: center;
+    color: black;
+    font-size: 110%;
 }
 .sign-in-btn{
     text-align: center;
-    margin: 5px 10px;
+    margin-left: 50%;
+    width: 50%;
 }
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+a.two:link{ color: grey; }
+a.two:hover{ color: #3399ff; }
+a.three:link{ color: white}
+a.three:hover{ color: #3399ff; }
+a.three:visited{ color: white;}
+a.four:link{ color: white; text-decoration: underline;}
+a.four:hover{ color: #3399ff; }
+a.four:visited{ color: white; text-decoration: underline;}
+
 .sub-btn{
     text-align: center;
-    padding: 10px;
-    margin: 5px 10px;
-    background-color: violet;
+    padding: 5px;
+    background-color: #BEEBED;
+    margin-left: 10%;
 }
 .cate-bar{
     list-style-type: none;
     width: 100%;
     overflow: auto;
     margin: 0;
-    padding: 0;
-    background-color: #333;
 }
 .cate-li{
     align-content: center;
@@ -50,12 +70,12 @@ a{
 }
 .cate-li a{
     display: block;
-    color: white;
     text-align: center;
     text-decoration: none;
+    color: white;
 }
 .cate-li a:hover{
-    background-color: #111;
+    background-color: black;
 }
 .nav-container{
     height: 100%;
@@ -64,7 +84,7 @@ a{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #23222B;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 30px;
@@ -81,8 +101,12 @@ a{
     display: block;
     transition: 0.2s;
 }
+.sent{
+    margin-left: 1%;
+    font-family: FC Home;
+}
 .close-btn{
-    color: red;
+    color: white;
     position: fixed;
     font-size: 0;
     margin-left: 10px;
@@ -113,7 +137,7 @@ a{
     width: 50px;
 }
 .sub-content{  
-    background-color: #FCCD04;
+    background-color: whitesmoke;
     margin: 10px 5px;
     border-radius: 10px;
 }
@@ -148,10 +172,10 @@ input[type=submit]:hover {
 
 /*---------- Content --------------*/
 .wrapper-cards{
-    background-color: #F5E6CC;
+    background-color: white;
 }
 .all-cards-container{
-    margin: 5% 15%; 
+    margin: 3% 10%; 
 }
 .small-cards-container {
     display: grid;
@@ -161,18 +185,19 @@ input[type=submit]:hover {
     grid-template-areas:
       "left-small-content left-small-content right-small-content right-small-content";
   }
-  .left-small-content { margin: 2%; grid-area: left-small-content; }
-  .right-small-content { margin: 2%; grid-area: right-small-content; }
-.small-cards-container img{
-    width: 200px;
-    height: 200px;
-}
+  .left-small-content { 
+      margin: 3%; 
+      grid-area: left-small-content; 
+      padding: 1%; 
+      width: 90%;
+    }
+  .right-small-content { margin: 3%; grid-area: right-small-content; padding: 1%;}
 
 .large-cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
+    gap: 1px 1px;
     grid-template-areas:
       "left-large-content left-large-content right-large-content right-large-content"
       "left-large-content left-large-content right-large-content right-large-content";
@@ -189,19 +214,12 @@ input[type=submit]:hover {
       "up-small-content"
       "down-small-content";
   } 
-  .up-small-content { margin: 2%; grid-area: up-small-content; }
-  .down-small-content { margin: 2%; grid-area: down-small-content; }
+  .up-small-content { margin: 2%; grid-area: up-small-content; height: 85%;}
+  .down-small-content { margin: 2%; grid-area: down-small-content; height: 85%;}
   
 .single-content{
     margin: 2%;
 }
-.card-block{
-    position: relative;
-    height: 100%;
-    background-color: white;
-}
-
-
 /*------------------------------------------------*/
 /*---------- รอพลอยทำเส่ดแร้วค่อยเอาไปใส่ ------------*/
 /*------------------------------------------------*/
@@ -234,8 +252,8 @@ input[type=submit]:hover {
 
 /*-------- most popular -----------*/
 .most-popular{
-    padding: 5% 10%;
-    background-color: #FFB48F;
+    padding: 3% 10%;
+    background-color: #d1bdfa;
 }
 .pop-wrapper{
     width: 100%;
@@ -247,7 +265,7 @@ input[type=submit]:hover {
 }
 .pop{
     width: 25%;
-    margin: 2%;
+    margin: 3%;
     display: inline-block;
 }
 .pop-see-more{
@@ -257,10 +275,12 @@ input[type=submit]:hover {
 /*-------------------------------------*/
 
 /*-------- footer ---------*/
+footer{
+    background-color: #23222B;
+}
 .footer-logo{
     display: block;
     text-align: center;
-    margin: 2%;
 }
 .social-wrapper{
     text-align: center;
@@ -281,5 +301,10 @@ input[type=submit]:hover {
 }
 .footer-legal{
     text-align: center;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    font-size: 83%;
+    padding: 0% 2%;
 }
 /*---------------------------------*/
