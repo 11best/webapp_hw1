@@ -30,18 +30,19 @@
 <title></title></head>
 
 <body id="main">
-    <header class="header">
-        <div id="logo-bar" class="navbar navbar-light bg-light logo-bar ">
+    <header class="header"> 
+                                                                    <!-- มีเพิ่มตรงนี้ด้วยคับ รอของพลอย-->
+        <div id="logo-bar" class="navbar navbar-light bg-light logo-bar " style="z-index: 4;"> 
             <a class="logo-hamburger col-1" onclick="openNav();" to="#" href="#"><i class="fas fa-bars"></i></a>
-            <div class="logo-bar_wrapper col">
+            <div class="logo-bar_wrapper col-md">
                 <h1>Backchannel</h1>
-            </div>
-            <div class="header_account-links col-1">
+            </div>                  <!-- เพิ่ม xl คับ -->
+            <div class="header_account-links col-xl-1">
                 <div>
                     <div class="sign-in-btn"><a to="/account/sign-in/" href="/account/sign-in">Sign In</a></div>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-xl-1">
                 <div style="display: none;">
                     <div ><a href="https://subscribe.wired.com/subscribe/splits/wired/WIR_FAILSAFE?source=HCL_WIR_MOBILE_NAVBAR_FAILSFE_0"
                             target="_blank">
@@ -54,13 +55,13 @@
                     </div>
                 </div>
 
-                <div class="sub-btn"><a target="_blank" to="#" rel="" href="#">Subscribe</a></div>
+                <div id="sub_btn" onmouseover="openSub();" class="sub-btn"><a target="_blank" to="#" rel="" href="#">Subscribe</a></div>
 
             </div>
-            <button class="search-btn col-1" onclick="openNav();"><i aria-label="Search Icon" class="fas fa-search"></i></button>
+            <button class="search-btn col-xl-1 d-none d-md-block" onclick="openNav();"><i aria-label="Search Icon" class="fas fa-search"></i></button>
         </div>
-
-        <nav class="navbar navbar-dark bg-dark">
+                                             <!-- เพิ่มตรงนี้ด้วยคับ -->
+        <nav class="navbar navbar-dark bg-dark d-none d-md-block">
             <ul class="cate-bar">
                 <li class="cate-li"><a to="/category/backchannel/" href="/category/backchannel">backchannel</a></li>
                 <li class="cate-li"><a to="/category/business/" href="/category/business">business</a></li>
@@ -129,10 +130,11 @@
             </div>
         </div>
 
-        <div id="newsletter-subscribe" class="sub-container">
+        <div id="sub-container" onmouseover="openSub();" onmouseout="closeSub();">
             <div>
                 <div class="row">
-                    <div class="sub-content col">
+                    <!-- เพิ่ม -lg ให้กับทุก sub-content เลยคับ -->
+                    <div class="sub-content col-lg">
                         <div>
                             <h4><a to="/newsletter" href="/newsletter">Get Our Longreads Newsletter</a></h4>
                             <div>
@@ -143,11 +145,12 @@
                                     action="//tuipied.sharepoint.com///tuipied.sharepoint.com///wired.us8.list-manage.com/subscribe/post-json?u=d6a9b4ef731bfa16b27259de6&amp;id=62b9dead85&amp;c=?"
                                     method="get" name="mc-embedded-subscribe-form" target="_blank">
                                     <input type="email" name="email" placeholder="Enter your email" value="">
-                                    <div>
+                                    <!-- เพิ่ม none ที่ตรงนี้ -->
+                                    <div style="display: none;">
                                         <input type="text" name="Email" value="">
                                     </div>
                                     <input type="submit" value="Submit" name="subscribe">
-                                    <div>
+                                    <div style="display: none;">
                                         <div>
                                             <a to="#" href="#">
                                                 <iclass="icon icon--next-round-black"></i>
@@ -159,15 +162,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sub-content col">
+                    <div class="sub-content col-lg-3">
                         <div>
                             <h4>
                                 <a target="_blank" to="https://twitter.com/backchnnl"
                                     href="https://twitter.com/backchnnl">Follow Us<br>On Twitter</a>
                             </h4>
                             <div>
-                                <div><img alt="BACKCHANNEL Twitter" src="/images/logos/backchannel-twitter.png">
-                                    <div>
+                                <div><img alt="BACKCHANNEL Twitter" src="https://www.wired.com/images/logos/backchannel-twitter.png">
+                                    <div style="margin-left : 10px">
                                         <p>Backchannel is moving to Wired! Here's what that means:
                                             <a target="_blank" class="no-pad" to="/story/backchannel-is-moving-to-wired"
                                                 href="/story/backchannel-is-moving-to-wired">http://trib.al/Ar1TZSg</a>
@@ -175,11 +178,11 @@
                                     </div>
                                 </div><a class="link--arrow" target="_blank" to="https://twitter.com/backchnnl"
                                     href="https://twitter.com/backchnnl">
-                                    <i class="icon icon--next-round-black"></i><span>Follow</span></a>
+                                    <i class="icon icon--next-round-black"></i><span class="link_text">Follow</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="sub-content col">
+                    <div class="sub-content col-lg-3">
                         <h4><a target="_blank" to="https://www.facebook.com/backchnnl/"
                                 href="https://www.facebook.com/backchnnl/">Follow Us<br>On Facebook</a>
                         </h4>
@@ -191,7 +194,7 @@
                             </h5>
                             <a target="_blank" to="https://www.facebook.com/backchnnl/"
                                 href="https://www.facebook.com/backchnnl/"><i
-                                    class="icon icon--next-round-black"></i><span class="link__text">Follow</span></a>
+                                    class="icon icon--next-round-black"></i><span class="link_text">Follow</span></a>
                         </div>
                     </div>
                 </div>
@@ -207,14 +210,14 @@
             </span>
             <div class="small-cards-container"> <!--- this row has 2 contents -->
                 <div class="left-small-content"> <!-- 1st content -->
-                    <div>
+                    <div class="card-block">
                         <ul>
-                            <li class="card-component__image>">
+                            <li>
                                 <a to=" /story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain/"
                                     href="/story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain">
                                 <div>
                                     <div>
-                                        <div><img
+                                        <div class=""><img
                                                 src="https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_4800,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg"
                                                 srcset="https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_248,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 248w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_303,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 303w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_342,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 342w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_374,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 374w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_496,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 496w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_606,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 606w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_684,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 684w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_744,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 744w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_748,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 748w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_827,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 827w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_909,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 909w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_1026,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 1026w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_1122,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 1122w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_1654,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 1654w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_2481,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 2481w, https://media.wired.com/photos/6018743e62563d048b7c100c/16:9/w_4800,c_limit/backchannel-wired-sensor-fusion-yoshi-sodeoka.jpg 4800w"
                                                 sizes="(max-width: 599px) calc(100vw - (20px * 2) - (16px * 2)), (max-width: 899px) calc(100vw - (50px * 2) - (16px * 2)), (min-width: 900px) and (max-width: 1031px) calc(((100vw - (50px * 2) - 300px) * 0.6666666666666666) - 16px - (16px * 2)), 373.3333333333333px"
@@ -243,9 +246,9 @@
                 </div>
 
                 <div class="right-small-content"> <!--- 2nd content -->
-                    <div>
+                    <div class="card-block">
                         <ul>
-                            <li class="card-component__image"><a
+                            <li><a
                                     to=" /story/2034-part-ii-blackout-washington-dc/" aria-label="card link narrow"
                                 href="/story/2034-part-ii-blackout-washington-dc">
                                 <div>
@@ -290,11 +293,11 @@
             </div>
 
             <div class="large-cards-container"> <!-- this row has 3 contents -->
-                <div class="left-large-content small-updown-container"> 
+                <div class="left-large-content" id="small-updown-container"> 
                     <div class="up-small-content"> <!-- 3rd content -->
-                        <div>
+                        <div class="card-block">
                             <ul>
-                                <li class="card-component__image"><a
+                                <li><a
                                         to="/story/lion-polygamist-and-biofuel-scam/" aria-label="card link small"
                                         href="/story/lion-polygamist-and-biofuel-scam">
                                         <div class="aspect-ratio-component medium-down-16-9 medium-up-1-1">
@@ -334,8 +337,8 @@
                         </div>
                     </div>
                     <div class="down-small-content"> <!-- 4th content -->
-                        <div>
-                            <div>
+                        <div class="card-block">
+                            <div> <!-- WHAT??? -->
                                 <div id="cns-ads-slot-type-ap-native-card-0">
                                     <div></div>
                                     <div id="ap_native_card_0">
@@ -346,7 +349,7 @@
                                 <div></div>
                             </div>
                             <ul>
-                                <li class="card-component__image">
+                                <li>
                                     <a to="/story/autonomous-car-chaos-2004-darpa-grand-challenge/"
                                         href="/story/autonomous-car-chaos-2004-darpa-grand-challenge">
                                         <div>
@@ -385,9 +388,9 @@
                     </div>
                 </div>
                 <div class="right-large-content"> <!-- 5th content -->
-                    <div>
+                    <div class="card-block">
                         <ul>
-                            <li class="card-component__image"><a
+                            <li><a
                                     to="/story/covid-immunity-antibodies/" aria-label="card link text"
                                     href="/story/covid-immunity-antibodies">
                                     <div>
@@ -418,9 +421,9 @@
             </div>
             <div class="single-card-container"> <!-- this row has 1 content-->
                 <div class="single-content"> <!-- 6th content -->
-                    <div>
+                    <div class="card-block">
                         <ul>
-                            <li class="card-component__image"><a
+                            <li><a
                                     to="/story/2034-part-i-peril-south-china-sea/" aria-label="card link top-reversed"
                                     href="/story/2034-part-i-peril-south-china-sea">
                                     <div>

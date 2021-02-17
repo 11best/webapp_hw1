@@ -4,8 +4,16 @@ function openNav() {
     document.getElementById("closebtn").style.fontSize = "25px";
   }
   
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.getElementById("closebtn").style.fontSize = "0";
-  }
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("closebtn").style.fontSize = "0";
+}
+
+function openSub(){
+  document.getElementById("sub-container").style.marginTop = "600px"
+}
+
+function closeSub(){
+  document.getElementById("sub-container").style.marginTop = "-635px"
+}
