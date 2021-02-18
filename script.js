@@ -11,9 +11,11 @@ function closeNav() {
 }
 
 function openSub(){
-  document.getElementById("sub-container").style.marginTop = "600px"
+  document.getElementById("sub-container").style.marginTop = "600px";
+  document.getElementById("sub-container").style.display = "block";
 }
 
 function closeSub(){
   document.getElementById("sub-container").style.marginTop = "-635px"
+  document.getElementById("sub-container").style.display = "none";
 }
